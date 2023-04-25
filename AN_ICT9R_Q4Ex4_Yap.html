@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Merriweather:wght@300&family=Montserrat:wght@100&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Merriweather:wght@300&family=Montserrat:wght@100&family=Roboto+Condensed:ital@1&display=swap" rel="stylesheet">
+
+  <style type="text/css">
+    h1{
+      font-family: Alex Brush;
+    }
+    
+  </style>
+  <title>Exercise4</title>
+</head>
+<body class="bg-secondary">
+  <h1>Fahrenheit to Celsius</h1>
+  <form>
+     Fahrenheit: <input type="number" id="num1">
+      <br>
+      <input type="Submit" name="CALCULATE" onclick="Calculate()" class="btn btn-success">
+      <input type="Reset" name="CANCEL" class="btn btn-danger">
+      </form>
+  </div>
+
+      <script type="text/javascript">
+      function Calculate(){
+      let num1 = document.getElementById('num1').value;
+      let quotient = (num1 - 32)/1.8;
+      alert("The value in Celsius is : " + quotient);
+          }
+      </script>
+</body>
+</html>
