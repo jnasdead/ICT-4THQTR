@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abel&family=Alex+Brush&family=Lora&family=Merriweather:ital,wght@0,300;1,300&family=Montserrat:wght@100&family=Parisienne&family=Playfair+Display:wght@600&family=Roboto+Condensed:ital@1&family=Sanchez&family=Space+Mono&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Lora&family=Merriweather:ital,wght@0,300;1,300&family=Montserrat:wght@100&family=Parisienne&family=Playfair+Display:wght@600&family=Roboto+Condensed:ital@1&family=Sanchez&family=Space+Mono&display=swap" rel="stylesheet">
+
+  <style type="text/css">
+    h1{
+      font-family: Raleway;
+    }
+    h4{
+      font-family: Playfair Display;
+    }
+    td, b{
+      font-family: Abel;
+    }
+    body{
+      background-color: #658354;
+    }
+  </style>
+  <title>SW2</title>
+</head>
+<body>
+  <center><h1>Fahrenheit to Celsius</h1></center>
+  <center><p id='date'></p></center><br>
+
+  <script type="text/javascript">
+    const DT = new Date();//constant declaration for date object
+    document.getElementById('date').innerHTML = DT;
+  </script>
+
+  <center><form>
+     Fahrenheit: <input type="number" id="num1">
+      <br>
+      <input type="Submit" name="CALCULATE" onclick="Calculate()" class="btn btn-success">
+      <input type="Reset" name="CANCEL" class="btn btn-danger">
+      </form></center>
+  </div>
+
+      <script type="text/javascript">
+      function Calculate(){
+      let num1 = document.getElementById('num1').value;
+      let quotient = (num1 - 32)/1.8;
+      alert("The value in Celsius is : " + quotient);
+          }
+      </script>
+      <center><h4>Temperature Facts!</h4></center>
+<center><table border="5" cellpadding="5" cellspacing="4" class="1">
+         <tr>
+             <td><center><b>Celsius</b></center></td>
+             <td><center><b>Fahrenheit</b></center></td>
+             <td>
+                 <center><b>Description</b></center>
+             </td>
+         </tr>
+         <tr>
+             <td>-273.15</td>
+             <td>-459.67 -</td>
+             <td><li>Absolute zero temperature</li></td></tr>
+         <tr>
+             <td>0</td>
+             <td>32.0</td>
+             <td>
+                 <li>Freezing/melting point of water</li></td>
+        </tr>
+        <tr>
+             <td>21</td>
+             <td>69.8</td>
+             <td>
+                 <li>Room temperature</li></td>
+        </tr>
+        <tr>
+             <td>37</td>
+             <td>98.6</td>
+             <td>
+                 <li>Average body temperature</li></td>
+        </tr>
+    </table></center>
+</body>
+</html>
