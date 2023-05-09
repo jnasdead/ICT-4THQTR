@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Abel&family=Alex+Brush&family=Lora&family=Merriweather:ital,wght@0,300;1,300&family=Montserrat:wght@100&family=Parisienne&family=Playfair+Display:wght@600&family=Pontano+Sans:wght@300&family=Roboto+Condensed:ital@1&family=Rufina:wght@700&family=Sanchez&family=Space+Mono&family=Stint+Ultra+Expanded&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Abel&family=Alex+Brush&family=Alice&family=Lora&family=Merriweather:ital,wght@0,300;1,300&family=Montserrat:wght@100&family=Parisienne&family=Playfair+Display:wght@600&family=Pontano+Sans:wght@300&family=Roboto+Condensed:ital@1&family=Rufina:wght@700&family=Sanchez&family=Space+Mono&family=Stint+Ultra+Expanded&display=swap" rel="stylesheet">
+    <title>Q4 Exercise 5</title>
+
+    <style>
+        #figure1, #figure2{
+            width: 500px;
+        }
+        h2{
+        	font-family: Rufina;
+        }
+        p{
+         font-family: Alice;
+        }
+    </style>
+
+</head>
+<body>
+
+<script type="text/javascript">
+	window.alert("Click Continue to learn more about Ohm's Law!")
+</script>
+
+	<div class="container">
+	<h2>The Ohm's Law Equation</h2>
+	<p>Ohm's Law describes the way current flows through a material when different levels of voltage are applied. Some materials like electrical wires present little resistance to the current flow and this type of material is called a conductor. Hence if this conductor is placed directly across a battery for example, a lot of current would flow.</p><br>
+	<img src="https://www.electronics-notes.com/images/ohms-law-triangle-circuit-headline.jpg" width="450" ><br>
+	<p>For temperature, we might use degrees Fahrenheit or degrees Celsius. Here are the standard units of measurement for electrical current, voltage, and resistance:</p><br>
+	<img src="https://www.allaboutcircuits.com/uploads/articles/units-measurement-electrical-current.png"><br>
+
+	 <p>Ohm’s principal discovery was that the amount of electric current through a metal conductor in a circuit is directly proportional to the voltage impressed across it, for any given temperature. Ohm expressed his discovery in the form of a simple equation, describing how voltage, current, and resistance interrelate.</p>
+    <img src="https://www.allaboutcircuits.com/uploads/articles/ohms-law-equation.png"> <br>
+    <p>In this algebraic expression, voltage (E) is equal to current (I) multiplied by resistance (R). Using algebra techniques, we can manipulate this equation into two variations, solving for I and R, respectively:</p>
+
+    <img src="https://www.allaboutcircuits.com/uploads/articles/ohms-equation-current-resistance.png" id="figure 1"><br>
+    <p>Calculate the amount of current (I) in a circuit, given values of voltage (E) and resistance (R):</p>
+    <img src="https://www.allaboutcircuits.com/uploads/articles/current-flow-ER.jpg"><br>
+
+	<div class="row">
+		<div class="col-6 mt-5">
+			Enter Voltage (E): <input type="text" id="V" class="form-control">
+			Enter Resistance (R): <input type="text" id="R" class="form-control">
+			<input type="Submit" value="Compute" class="btn btn-success" onclick="Calculate()">
+			<p id="OUTPUT"></p>
+		</div>
+	<div>
+	
+
+	<audio id="audio1" src="turnonlights.mp3"></audio>
+	<h2>What makes a light bulb light up?</h2>
+	<p>When a light bulb connects to an electrical power supply, an electrical current flows from one mental contact to the other. As the current travels through the wires and the filament, the filament heats up to the point where it begins to emit photons, which are small packets of visible light.</p>
+	<button class="btn btn-success" onmouseover="On()" onmouseout="Off()"> 
+		TURN ON LIGHT
+	</button>
+	<img src="switchOFF.png" width="100" height="150" id="bulb">
+
+	
+	<script type="text/javascript">
+
+		function Calculate(){
+			let V = document.getElementById('V').value;
+			let R = document.getElementById('R').value;
+			let Current = V/R;
+			document.getElementById('OUTPUT').innerHTML = "The computed Current (I) is :" + Current;
+		}
+
+		function On(){
+			document.getElementById('bulb').src = "switchON.png";
+			document.getElementById('audio1').play();
+		}
+		function Off(){
+			document.getElementById('bulb').src = "switchOFF.png";
+			document.getElementById('audio1').pause();
+		}
+	</script><br>
+
+SOURCES: <br>
+	<a href="https://www.electronics-notes.com/articles/basic_concepts/resistance/what-is-ohms-law-formula-equation.php">Understanding Ohm's Law</a><br>
+	<a href="https://www.allaboutcircuits.com/textbook/direct-current/chpt-2/voltage-current-resistance-relate/">Ohm's Law- How Voltage, Current and Resistance Relate</a><br>
+</body>
+</html>
